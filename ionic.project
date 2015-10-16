@@ -1,0 +1,11 @@
+{
+  "name": "pcshop.demo",
+  "app_id": "",
+  "browsers": [
+    {
+      "platform": "android",
+      "browser": "crosswalk-lite",
+      "version": "14.42.334.0"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+<ion-modal-view id="youtube-player-modal-view" ng-controller="ItemsController">
+    <ion-header-bar id="youtube-player-header" style="background-color: #000001">
+        <h1 class="title"></h1>
+        <button class="button button-clear button-light animated bounce" ng-click="close_player()">
+            <i class="icon ion-ios7-close-outline"></i>
+        </button>
+    </ion-header-bar>
+    <ion-content style="background-color: #000001">
+        <div id="player">
+            <iframe width="{{video_to_play.width}}" height="345"
+                    src="{{video_to_play.youtube_video_url}}">
+            </iframe>
+        </div>
+    </ion-content>
+</ion-modal-view>

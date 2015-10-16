@@ -1,0 +1,20 @@
+<ion-view>
+	<ion-content>
+      <!-- Content Here -->
+		<!-- Pull to refresh -->
+		<ion-refresher pulling-text="Pull to refresh..." on-refresh="pull_to_refresh()"></ion-refresher>
+
+		<!-- List of Items -->
+		<ion-list>
+		  <ion-item ng-repeat="item in items">
+			  <a class="item item-thumbnail-left" ng-click="show_item_actions_sheet(item)">
+		      <img src={{item.thumbnail}}>
+		      <h2>{{item.title}}</h2>
+		      <p>{{item.description}}</p>
+		      <h2>{{(item.price|currency)}}</h2>
+		    </a>
+		  </ion-item>
+		</ion-list>
+
+    </ion-content>
+</ion-view>

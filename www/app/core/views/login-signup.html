@@ -1,0 +1,30 @@
+<ion-modal-view id="login-signup-modal-view" ng-controller="LoginSignupController">
+	<ion-header-bar align-title="right" id="login-signup-modal-view-header">
+		<button class="button button-clear button-light" ng-click="close_login_signup_view()">&lt; Back</button>
+	</ion-header-bar>
+	<ion-content>
+		<div class="row" id="login_signup_title_container" style="margin-top:10%;margin-bottom:10%;">
+			<div class="col">
+				<h1 id="login-signup-title" class="head-text center-align" >PC Shop</h1>
+				<h5 id="login-signup-subtitle" class="head-text center-align" >An Ionic framework based demo app</h5>
+			</div>			
+		</div>
+		<div class="row">
+			<div class="col col-5">		
+			</div>
+			<div class="col col-90">
+				<button class="button button-block button-positive icon-left ion-social-facebook-outline" ng-click="login_with_facebook()">
+					Login with Facebook
+				</button>						
+				<button class="button button-block button-assertive icon-left ion-social-googleplus-outline"  ng-click="login_with_googleplus()">
+					Login with Google+
+				</button>											
+				<button class="button button-block button-calm icon-left ion-social-twitter-outline" ng-click="login_with_twitter()">
+					Login with Twitter
+				</button>																	
+			</div>
+			<div class="col col-5">		
+			</div>			
+		</div>
+	</ion-content>
+</ion-modal-view>

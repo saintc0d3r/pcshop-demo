@@ -1,0 +1,12 @@
+HOW TO - re-install missing cordova plugin:
+-------------------------------------------
+- Remove your ios/android platform: ionic platform remove ios
+- Readd the platform that was removed in prior step: ionic platform add ios
+	Confirm that error occurs when installing "com.phonegap.plugins.facebookconnect" plugin
+- Remove the facebookconnect plugin: ionic plugin remove com.phonegap.plugins.facebookconnect	
+- Re-Add the facebookconnect plugin using this following command: 
+	ionic plugin add https://github.com/Wizcorp/phonegap-facebook-plugin.git --variable APP_ID="748552275232677" --variable APP_NAME="pcshop-demo";
+- Remove & Re-add cordova-plugin-device plugin using this following command:
+	ionic plugin remove cordova-plugin-device; ionic plugin add https://github.com/apache/cordova-plugin-device.git
+- Remove & re-add nl.x-services.plugins.socialsharing using this following command:
+	ionic plugin remove nl.x-services.plugins.socialsharing; ionic plugin add: https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin.git

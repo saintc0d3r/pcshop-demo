@@ -1,0 +1,61 @@
+<ion-view>
+	<ion-pane>
+		<!-- Main View would display a fixed header bar and a main view container -->
+		<ion-header-bar class="bar-positive">
+			<!-- add a button on the header, for revealing the right side menu -->
+			<button class="button button-icon" ng-click="slide_left_side_menu()">
+				<i class="icon ion-navicon"></i>
+			</button>
+
+			<!-- Title -->
+			<h1 class="title">PC Shop</h1>
+
+			<!-- add 2 buttons on the header, for displaying post new item dialog & Search button -->		
+			<!-- Search Button -->
+	<!-- 		<button class="button button-icon">
+				<i class="icon ion-ios7-search"></i>            
+			</button> -->
+			<!-- Add new item dialog button -->
+	<!-- 		<button class="button button-icon" ng-click="show_post_new_item_view()" ng-show="is_admin()">
+				<i class="icon ion-compose"></i>
+			</button>  -->                     
+	    </ion-header-bar>            
+
+		<ion-nav-view animation="slide-left-right">
+			<!-- Center content -->	
+			<ion-view>
+				<!-- the main's index view consists of a sliding navigation menu (reveal from left side) and a center content which displays the items stream feeds -->
+				<ion-side-menus>
+				  
+				  <!-- Center content -->
+				  
+				  <ion-side-menu-content>
+				  	<ion-nav-view name="homeContent"></ion-nav-view>
+				  </ion-side-menu-content>
+					
+				  <!-- Left menu -->
+				  <ion-side-menu side="left">
+				  	<ion-content scroll="false">
+
+				  		<!-- Add a footer in the side menu which holds a link to display SignUp, Login, Forgot Password for authenticated user or display a link to sign out for authenticated user -->
+				  		<ion-footer-bar align-title="left" class="bar-stable">
+				  		  <div class="buttons">
+				  		  	<!-- a link to navigate to Signup, Login, Forgot Password view -->
+				  		    <button class="button button-clear" ng-click="show_login_signup_view()" ng-show="showButtonLoginSignup">
+				  		    	<i class="icon ion-log-in"></i>
+				 					Login or SignUp 		    	
+				  		    </button>
+				  		    <!-- a link to signout from the app for authenticated user -->
+				  		    <button class="button button-clear" ng-click="logout()" ng-show="showButtonLogout">
+				  		    	<i class="icon ion-log-out"></i>
+				 					Logout		    			
+				  		    </button>	  		    
+				  		  </div>
+				  		</ion-footer-bar>
+					</ion-content>
+				  </ion-side-menu>
+				</ion-side-menus>		
+			</ion-view>		
+		</ion-nav-view>	
+	</ion-pane>
+</ion-view>
